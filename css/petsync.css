@@ -1,0 +1,339 @@
+﻿:root {
+    --verde: #315b49;
+    --verde-claro: #527c66;
+    --fondo: #f1f5f2;
+    --blanco: #ffffff;
+    --texto: #333333;
+    --borde: #dce6df;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body.petsync {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background: var(--fondo);
+    line-height: 1.5;
+}
+
+.ps-header {
+    background: var(--blanco);
+    border-bottom: 1px solid var(--borde);
+    padding: 14px max(20px, calc((100% - 1100px) / 2));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.ps-logo {
+    color: var(--verde);
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.ps-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ps-nav a,
+.ps-nav button {
+    display: inline-block;
+    padding: 9px 12px;
+    color: var(--verde);
+    background: transparent;
+    border: none;
+    border-radius: 7px;
+    text-decoration: none;
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.ps-nav a:hover,
+.ps-nav button:hover {
+    background: var(--fondo);
+}
+
+.ps-nav .activo {
+    background: var(--verde);
+    color: white;
+}
+
+.ps-contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 20px;
+}
+
+.ps-hero {
+    padding: 45px 35px;
+    background: var(--verde);
+    border-radius: 18px;
+    color: white;
+}
+
+.ps-hero h1 {
+    margin: 0 0 12px;
+    color: white;
+    font-size: clamp(28px, 4vw, 42px);
+}
+
+.ps-hero p {
+    max-width: 680px;
+    font-size: 17px;
+}
+
+.ps-seccion {
+    margin-top: 35px;
+}
+
+.ps-seccion h2 {
+    color: var(--verde);
+    margin-bottom: 16px;
+}
+
+.ps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.ps-tarjeta {
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, .04);
+}
+
+.ps-tarjeta h3 {
+    margin: 0 0 12px;
+    color: var(--verde);
+}
+
+.ps-tarjeta p {
+    min-height: 66px;
+    color: #5a655e;
+}
+
+.ps-boton {
+    display: inline-block;
+    background: var(--verde-claro);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 11px 18px;
+    font: inherit;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.ps-boton:hover {
+    background: var(--verde);
+    color: white;
+}
+
+.ps-boton-secundario {
+    background: white;
+    color: var(--verde);
+    border: 1px solid var(--verde);
+}
+
+.ps-boton-secundario:hover {
+    background: var(--fondo);
+    color: var(--verde);
+}
+
+.ps-boton:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+}
+
+.ps-formulario {
+    max-width: 480px;
+    margin: 35px auto;
+    padding: 30px;
+    background: white;
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+}
+
+.ps-formulario h1 {
+    margin-top: 0;
+    color: var(--verde);
+}
+
+.ps-campo {
+    margin-bottom: 18px;
+}
+
+.ps-campo label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.ps-campo input,
+.ps-campo select {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b9c9bf;
+    border-radius: 7px;
+    background: white;
+    font: inherit;
+}
+
+.ps-campo input:focus,
+.ps-campo select:focus {
+    outline: 2px solid var(--verde-claro);
+    outline-offset: 1px;
+}
+
+.ps-aviso {
+    padding: 13px;
+    background: #e7f1eb;
+    border-left: 4px solid var(--verde-claro);
+    border-radius: 5px;
+    margin: 18px 0;
+    font-size: 14px;
+}
+
+.ps-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.ps-footer {
+    padding: 24px;
+    margin-top: 45px;
+    text-align: center;
+    border-top: 1px solid var(--borde);
+    color: #5a655e;
+}
+
+.ps-oculto {
+    display: none !important;
+}
+
+@media (max-width: 760px) {
+    .ps-header {
+        padding: 15px;
+    }
+
+    .ps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ps-hero {
+        padding: 30px 22px;
+    }
+
+    .ps-formulario {
+        margin: 20px auto;
+        padding: 22px;
+    }
+}
+body.petsync-integrada {
+    margin: 0;
+    padding: 0;
+    background-color: #f1f5f2;
+}
+
+body.petsync-integrada > h2 {
+    text-align: center;
+    margin-top: 25px;
+}
+
+body.petsync-integrada .ps-header {
+    width: 100%;
+}
+
+body.petsync-integrada .ps-header a {
+    text-decoration: none;
+}
+
+body.petsync-integrada .ps-header .ps-logo {
+    color: #315b49;
+}
+body.petsync-integrada {
+    margin: 0;
+    padding: 0;
+    background-color: #f1f5f2;
+}
+
+body.petsync-integrada > h2 {
+    text-align: center;
+    margin-top: 25px;
+}
+
+body.petsync-integrada .ps-header {
+    width: 100%;
+}
+
+body.petsync-integrada .ps-header a {
+    text-decoration: none;
+}
+
+body.petsync-integrada .ps-header .ps-logo {
+    color: #315b49;
+}
+/* Ajustes de integración visual PETSYNC */
+
+body.petsync-integrada {
+    background-color: #f1f5f2;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+}
+
+body.petsync-integrada h1,
+body.petsync-integrada h2,
+body.petsync-integrada h3 {
+    color: #315b49;
+}
+
+body.petsync-integrada .card {
+    background-color: white;
+    border: 1px solid #dce6df;
+    border-radius: 10px;
+}
+
+body.petsync-integrada .card-header {
+    background-color: #e7f1eb;
+    color: #315b49;
+}
+
+body.petsync-integrada .btn-secondary {
+    background-color: #527c66;
+    border-color: #527c66;
+}
+
+body.petsync-integrada .btn-secondary:hover {
+    background-color: #315b49;
+    border-color: #315b49;
+}
+
+body.petsync-integrada .ps-header {
+    background-color: white;
+}
+
+body.petsync-integrada .ps-nav a {
+    color: #315b49;
+}
+
+body.petsync-integrada .ps-nav a:hover {
+    background-color: #f1f5f2;
+}
