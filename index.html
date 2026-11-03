@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gestión de Cuidado de Mascotas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Registro de mascota</h2>
+    <h2>Registro de Mascota</h2>
     <form>
         <label>Nombre:</label>
         <input type="text" id="nombre" required>
@@ -39,12 +40,23 @@
 
 
         <h3>Alimentación y cuidados</h3>
-        <label>Alimentación:</label>
-        <input type="text" id="alimentacion">
-        <br><br>
+        <label>Tipo de alimentación:</label>
+        <select id="tipoAlimentacion">
+            <option value="">Seleccione una opción</option>
+            <option>Alimento seco</option>
+            <option>Alimento húmedo</option>
+            <option>Dieta especial</option>
+            <option>Frutas y verduras</option>
+        </select>
 
-        <label>Horarios:</label>
-        <input type="text" id="horarios">
+        <label>Horarios de alimentación:</label>
+        <select id="horarios">
+            <option value="">Seleccione los horarios</option>
+            <option>7:00 a. m. y 4:00 p. m.</option>
+            <option>8:00 a. m. y 5:00 p. m.</option>
+            <option>9:00 a. m. y 6:00 p. m.</option>
+            <option>7:00 a. m. y 7:00 p. m.</option>
+        </select>
         <br><br>
 
         <label>Cuidados especiales:</label>
@@ -61,11 +73,11 @@
         <textarea type="text" id="enfermedades"></textarea>
         <br><br>
 
-        <label>Veterinario:</label>
+        <label>Nombre del veterinario(a):</label>
         <input type="text" id="veterinario">
         <br><br>
 
-        <label>Contacto del veterinario:</label>
+        <label>Contacto del veterinario(a):</label>
         <input type="tel" id="contactoVeterinario">
         <br><br>
 
@@ -77,10 +89,6 @@
 
         <label>Teléfono:</label>
         <input type="tel" id="telefonoEmergencia">
-        <br><br>
-
-        <label>Contacto de emergencia:</label>
-        <input type="tel" id="contactoEmergencia">
         <br><br>
 
         <button type="submit">Registrar mascota</button>

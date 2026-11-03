@@ -1,0 +1,75 @@
+/* Diseño general */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f5f2;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    color: #315b49;
+}
+
+/* Títulos de secciones */
+h2, h3, h4 {
+    color: #315b49;
+}
+
+/* Formulario */
+form {
+    background-color: white;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* Etiquetas */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Campos */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cbd5ce;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Botones */
+button {
+    background-color: #527c66;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Efecto del botón */
+button:hover {
+    background-color: #315b49;
+}
+
+/* Fichas de mascotas */
+#listaMascotas div {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* Fotografías */
+#listaMascotas img {
+    max-width: 200px;
+    border-radius: 8px;
+}
