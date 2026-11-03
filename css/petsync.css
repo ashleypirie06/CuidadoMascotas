@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     --verde: #315b49;
     --verde-claro: #527c66;
     --fondo: #f1f5f2;
@@ -336,4 +336,186 @@ body.petsync-integrada .ps-nav a {
 
 body.petsync-integrada .ps-nav a:hover {
     background-color: #f1f5f2;
+}
+
+/* ===================================
+   MODULO DE GESTION DE MASCOTAS
+   =================================== */
+/* Diseño general */
+body.pagina-mascotas {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f5f2;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Título principal */
+body.pagina-mascotas h1 {
+    text-align: center;
+    color: #315b49;
+}
+
+/* Títulos de secciones */
+body.pagina-mascotas h2, body.pagina-mascotas h3, body.pagina-mascotas h4 {
+    color: #315b49;
+}
+
+/* Formulario */
+body.pagina-mascotas form {
+    background-color: white;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* Etiquetas */
+body.pagina-mascotas label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Campos */
+body.pagina-mascotas input, body.pagina-mascotas select, body.pagina-mascotas textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cbd5ce;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Botones */
+body.pagina-mascotas button {
+    background-color: #527c66;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Efecto del botón */
+body.pagina-mascotas button:hover {
+    background-color: #315b49;
+}
+
+/* Contenedor de fichas */
+body.pagina-mascotas #listaMascotas {
+    margin: 20px;
+}
+
+/* Tarjeta de mascota */
+body.pagina-mascotas .ficha {
+    background-color: white;
+    max-width: 450px;
+    padding: 25px;
+    margin: 20px;
+    border-radius: 15px;
+    border: 1px solid #e0e8e3;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Fotografía */
+body.pagina-mascotas .ficha img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Nombre de la mascota */
+body.pagina-mascotas .ficha h3 {
+    color: #315f4d;
+    font-size: 25px;
+}
+
+/* Títulos de las secciones */
+body.pagina-mascotas .ficha h4 {
+    color: #477d65;
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+/* Información */
+body.pagina-mascotas .ficha p {
+    font-size: 15px;
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+/* ===================================
+   MODULO DE GESTION DE SERVICIOS
+   =================================== */
+
+body.pagina-servicios {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+body.pagina-servicios header h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+body.pagina-servicios header p {
+    color: #666;
+    margin-top: 8px;
+}
+
+body.pagina-servicios .card {
+    border-radius: 6px;
+}
+
+body.pagina-servicios .card-header {
+    background-color: #f1f1f1;
+}
+
+body.pagina-servicios .form-label {
+    font-weight: 500;
+}
+
+body.pagina-servicios .table {
+    margin-bottom: 0;
+}
+
+body.pagina-servicios .btn {
+    min-width: 100px;
+}
+
+body.pagina-servicios footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+
+/* ===================================
+   AJUSTES FINALES DE INTEGRACION
+   =================================== */
+
+body.pagina-mascotas {
+    padding: 0;
+}
+
+body.pagina-servicios {
+    background-color: #f1f5f2;
+}
+
+body.pagina-servicios .card-header {
+    background-color: #e7f1eb;
+    color: #315b49;
+}
+
+body.pagina-servicios .btn-secondary {
+    background-color: #527c66;
+    border-color: #527c66;
+}
+
+body.pagina-servicios .btn-secondary:hover {
+    background-color: #315b49;
+    border-color: #315b49;
 }
