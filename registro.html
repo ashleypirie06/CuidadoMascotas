@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PETSYNC | Registro</title>
+    <link rel="stylesheet" href="css/petsync.css">
+</head>
+<body class="petsync">
+
+    <header class="ps-header">
+        <a href="inicio.html" class="ps-logo">🐾 PETSYNC</a>
+        <nav class="ps-nav" aria-label="Navegación principal">
+            <a href="inicio.html">Inicio</a>
+            <a href="login.html">Ingresar</a>
+            <a href="registro.html" class="activo" aria-current="page">
+                Registrarse
+            </a>
+        </nav>
+    </header>
+
+    <main class="ps-contenedor">
+        <form id="formRegistro" class="ps-formulario">
+            <h1>Crear cuenta</h1>
+            <p>Completa la información para explorar PETSYNC.</p>
+
+            <div class="ps-aviso">
+                Formulario demostrativo. El registro real de usuarios
+                requerirá integración con PHP y MySQL.
+            </div>
+
+            <div class="ps-campo">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre"
+                       maxlength="100" autocomplete="name" required>
+            </div>
+
+            <div class="ps-campo">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo"
+                       autocomplete="email" required>
+            </div>
+
+            <div class="ps-campo">
+                <label for="rol">Tipo de usuario</label>
+                <select id="rol" name="rol" required>
+                    <option value="">Seleccionar rol</option>
+                    <option value="propietario">Propietario</option>
+                    <option value="cuidador">Cuidador</option>
+                </select>
+            </div>
+
+            <div class="ps-campo">
+                <label for="clave">Contraseña</label>
+                <input type="password" id="clave" name="clave"
+                       minlength="8" autocomplete="new-password" required>
+            </div>
+
+            <div class="ps-campo">
+                <label for="confirmacion">Confirmar contraseña</label>
+                <input type="password" id="confirmacion"
+                       name="confirmacion" minlength="8"
+                       autocomplete="new-password" required>
+            </div>
+
+            <p id="mensajeRegistro" class="ps-aviso ps-oculto"
+               role="alert"></p>
+
+            <button class="ps-boton" type="submit">
+                Continuar en modo demostración
+            </button>
+
+            <p>
+                ¿Ya tienes una cuenta?
+                <a href="login.html">Iniciar sesión</a>
+            </p>
+        </form>
+    </main>
+
+    <footer class="ps-footer">
+        PETSYNC | Plataforma Web para la Coordinación del Cuidado de Mascotas
+    </footer>
+
+    <script src="js/petsync.js"></script>
+</body>
+</html>

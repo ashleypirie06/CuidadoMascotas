@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PETSYNC | Inicio</title>
+    <link rel="stylesheet" href="css/petsync.css">
+</head>
+<body class="petsync">
+
+    <header class="ps-header">
+        <a href="inicio.html" class="ps-logo">🐾 PETSYNC</a>
+
+        <nav class="ps-nav" aria-label="Navegación principal">
+            <a href="inicio.html" class="activo" aria-current="page">Inicio</a>
+            <a href="create-mascota.html" data-rol="propietario">Mascotas</a>
+            <a href="create-servicios.html">Servicios</a>
+            <a href="seguimiento.html">Seguimiento</a>
+            <a href="login.html" id="accesoDemo">Ingresar</a>
+            <button type="button" id="cerrarDemo" class="ps-oculto">Salir</button>
+        </nav>
+    </header>
+
+    <main class="ps-contenedor">
+
+        <section class="ps-hero">
+            <h1 id="saludo">Bienvenido a PETSYNC</h1>
+            <p>
+                Tu plataforma para organizar el cuidado temporal de mascotas,
+                coordinar servicios y mantener la información importante
+                en un solo lugar.
+            </p>
+            <p id="rolActual">
+                Explora las funcionalidades de nuestra plataforma.
+            </p>
+            <div class="ps-acciones">
+                <a class="ps-boton ps-boton-secundario" href="registro.html">
+                    Crear cuenta
+                </a>
+            </div>
+        </section>
+
+        <section class="ps-seccion" aria-labelledby="tituloServicios">
+            <h2 id="tituloServicios">Funcionalidades principales</h2>
+
+            <div class="ps-grid">
+
+                <article class="ps-tarjeta" data-rol="propietario">
+                    <h3>Mis mascotas</h3>
+                    <p>
+                        Registra tus mascotas y administra su alimentación,
+                        información médica y cuidados especiales.
+                    </p>
+                    <a class="ps-boton" href="create-mascota.html">
+                        Gestionar mascotas
+                    </a>
+                </article>
+
+                <article class="ps-tarjeta">
+                    <h3>Servicios de cuidado</h3>
+                    <p>
+                        Consulta las solicitudes de cuidado, los horarios
+                        y el estado de cada servicio.
+                    </p>
+                    <a class="ps-boton" href="create-servicios.html">
+                        Ver servicios
+                    </a>
+                </article>
+
+                <article class="ps-tarjeta" id="seguimiento">
+                    <h3>Seguimiento</h3>
+                    <p>
+                        Consulta las tareas de cuidado, las observaciones
+                        y las actualizaciones de las mascotas.
+                    </p>
+                    <a class="ps-boton" href="seguimiento.html">
+                        Ver seguimiento
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="ps-seccion" aria-labelledby="tituloProceso">
+            <h2 id="tituloProceso">¿Cómo funciona PETSYNC?</h2>
+
+            <div class="ps-grid">
+                <article class="ps-tarjeta">
+                    <h3>1. Registra</h3>
+                    <p>
+                        El propietario proporciona la información esencial
+                        de sus mascotas.
+                    </p>
+                </article>
+
+                <article class="ps-tarjeta">
+                    <h3>2. Coordina</h3>
+                    <p>
+                        El propietario solicita cuidados y el cuidador
+                        revisa las solicitudes disponibles.
+                    </p>
+                </article>
+
+                <article class="ps-tarjeta">
+                    <h3>3. Da seguimiento</h3>
+                    <p>
+                        Durante el servicio se registran actividades,
+                        observaciones y actualizaciones.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="ps-seccion">
+            <div class="ps-aviso">
+                PETSYNC se encuentra en desarrollo académico.
+                El acceso por roles es demostrativo y las demás
+                funcionalidades se integrarán progresivamente.
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="ps-footer">
+        PETSYNC | Plataforma Web para la Coordinación del Cuidado de Mascotas
+    </footer>
+
+    <script src="js/petsync.js"></script>
+</body>
+</html>
