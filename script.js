@@ -13,17 +13,20 @@ function registrarMascota(event) {
     let peso = obtenerDato("peso");
 
     let alimentacion = obtenerDato("alimentacion");
-    let horarios = obtenerDato("horarios");
+    let horariosSeleccionados = document.getElementById("horarios").selectedOptions;
+    let horarios = "";
+    for (let i = 0; i < horariosSeleccionados.length; i++) {
+        horarios += horariosSeleccionados[i].value + ", ";
+}
     let cuidados = obtenerDato("cuidados");
 
     let vacunas = obtenerDato("vacunas");
     let enfermedades = obtenerDato("enfermedades");
     let veterinario = obtenerDato("veterinario");
-    let contacto = obtenerDato("contacto");
 
     mostrarFicha(nombre, especie, raza, edad, peso,
         alimentacion, horarios, cuidados, vacunas,
-        enfermedades, veterinario, contacto);
+        enfermedades, veterinario);
 
     limpiarFormulario();
 }
@@ -31,7 +34,7 @@ function registrarMascota(event) {
 // funcion para crear y mostrar la ficha
 function mostrarFicha(nombre, especie, raza, edad, peso,
     alimentacion, horarios, cuidados, vacunas,
-    enfermedades, veterinario, contacto) {
+    enfermedades, veterinario) {
 
     let ficha = document.createElement("div");
 
@@ -53,7 +56,6 @@ function mostrarFicha(nombre, especie, raza, edad, peso,
 
         "<h4>Contactos</h4>" +
         "<p>Veterinario: " + veterinario + "</p>" +
-        "<p>Contacto de emergencia: " + contacto + "</p>";
 
     document.getElementById("listaMascotas").appendChild(ficha);
 }
