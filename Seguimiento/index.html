@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PETSYNC Seguimiento</title>
+
+    <link rel="stylesheet" href="css/seguimiento.css">
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <header class="encabezado">
+        <h1>PETSYNC</h1>
+        <p>Seguimiento y documentación</p>
+    </header>
+
+    <main class="contenedor">
+
+        <!-- bienvenida -->
+        <section class="bienvenida">
+            <h2>Seguimiento del cuidado</h2>
+            <p>Consulta las actividades y actualizaciones de tu mascota.</p>
+        </section>
+
+        <!-- info mascota -->
+        <section class="mascota">
+            <h3>Max</h3>
+            <p>Perro - Golden Retriever</p>
+            <span class="estado">Servicio en curso</span>
+
+        </section>
+
+        <!-- Resumen de tareas -->
+        <section class="resumen">
+            <div class="tarjeta">
+                <h3 id="totalTareas">0</h3>
+                <p>Total de tareas</p>
+            </div>
+            <div class="tarjeta">
+                <h3 id="completadas">0</h3>
+                <p>Completadas</p>
+            </div>
+            <div class="tarjeta">
+                <h3 id="pendientes">0</h3>
+                <p>Pendientes</p>
+            </div>
+
+        </section>
+
+        <!-- tareas de cuidado -->
+
+        <section class="seccion">
+
+            <h2>tareas de cuidado</h2>
+
+            <p>Actividades programadas para Max</p>
+
+            <form id="formTarea">
+
+                <input
+                    type="text"
+                    id="nombreTarea"
+                    placeholder="Nombre de la actividad"
+                    required
+                >
+
+                <input
+                    type="time"
+                    id="horaTarea"
+                    required
+                >
+
+                <button type="submit">Agregar tarea</button>
+
+            </form>
+
+            <div id="listaTareas"></div>
+
+        </section>
+
+        <!-- observaciones -->
+
+        <section class="seccion">
+
+            <h2>observaciones y reportes</h2>
+
+            <p>Registra informacion importante sobre el cuidado</p>
+
+            <form id="formReporte">
+
+                <label for="tipoReporte">Tipo de observación</label>
+
+                <select id="tipoReporte" required>
+
+                    <option value="">Seleccionar categoría</option>
+                    <option>Alimentación</option>
+                    <option>Comportamiento</option>
+                    <option>Salud</option>
+                    <option>Actividad física</option>
+                    <option>Otro</option>
+
+                </select>
+
+                <label for="descripcionReporte">Descripción</label>
+
+                <textarea
+                    id="descripcionReporte"
+                    placeholder="Escribe tu observación..."
+                    required
+                ></textarea>
+
+                <button type="submit">Registrar observación</button>
+
+            </form>
+
+            <div id="listaReportes"></div>
+
+        </section>
+
+        <!-- actualizaciones -->
+
+        <section class="seccion">
+
+            <h2>Actualizaciones del cuidador</h2>
+            <p>Comparte fotografías y novedades de la mascota.</p>
+
+            <form id="formActualizacion">
+
+                <label for="descripcionActualizacion">
+                    Descripción de la actividad
+                </label>
+
+                <textarea
+                    id="descripcionActualizacion"
+                    placeholder="Describe la actividad realizada..."
+                    required
+                ></textarea>
+
+                <label for="fotoActualizacion">Fotografía (opcional)</label>
+
+                <input
+                    type="file"
+                    id="fotoActualizacion"
+                    accept="image/*"
+                >
+
+                <button type="submit">Publicar actualización</button>
+
+            </form>
+
+            <div id="listaActualizaciones"></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>PETSYNC - Grupo 5</p>
+    </footer>
+    <script src="js/seguimiento.js"></script>
+
+</body>
+
+
+</html>

@@ -14,23 +14,18 @@ header p {
     color: #666;
     margin-top: 8px;
 }
-
 .card {
     border-radius: 6px;
 }
-
 .card-header {
     background-color: #f1f1f1;
 }
-
 .form-label {
     font-weight: 500;
 }
-
 .table {
     margin-bottom: 0;
 }
-
 .btn {
     min-width: 100px;
 }
