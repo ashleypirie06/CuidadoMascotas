@@ -218,11 +218,10 @@ body.petsync {
 }
 
 .ps-footer {
-    padding: 24px;
-    margin-top: 45px;
+    background-color: #315b49;
+    color: white;
     text-align: center;
-    border-top: 1px solid var(--borde);
-    color: #5a655e;
+    padding: 15px;
 }
 
 .ps-oculto {
@@ -486,12 +485,6 @@ body.pagina-servicios .btn {
     min-width: 100px;
 }
 
-body.pagina-servicios footer {
-    text-align: center;
-    margin-top: 30px;
-    padding: 15px;
-}
-
 
 /* ===================================
    AJUSTES FINALES DE INTEGRACION
@@ -518,4 +511,25 @@ body.pagina-servicios .btn-secondary {
 body.pagina-servicios .btn-secondary:hover {
     background-color: #315b49;
     border-color: #315b49;
+}
+
+body.pagina-servicios {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body.pagina-servicios main {
+    flex: 1;
+}
+
+/* footer */
+footer,
+.ps-footer {
+    background-color: #315b49;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 0;
+    border-top: none;
 }
