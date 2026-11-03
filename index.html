@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +8,14 @@
 </head>
 <body>
     <h2>Registro de Mascota</h2>
-    <form>
+    <form id="formMascota">
         <label>Nombre:</label>
         <input type="text" id="nombre" required>
         <br><br>
 
         <label>Especie:</label>
-        <select id="especie">
+        <select id="especie" required>
+            <option value="">Seleccione una especie</option>
             <option>Perro</option>
             <option>Gato</option>
             <option>Conejo</option>
@@ -27,7 +28,7 @@
         <br><br>
 
         <label>Edad:</label>
-        <input type="numer" id="edad">
+        <input type="number" id="edad">
         <br><br>
 
         <label>Peso (kg):</label>
@@ -35,13 +36,13 @@
         <br><br>
 
         <label>Fotografía:</label>
-        <input type="file" id="foto" accept="image/*"> 
+        <input type="file" id="foto" accept="image/*" required> 
         <br><br>
 
 
         <h3>Alimentación y cuidados</h3>
         <label>Tipo de alimentación:</label>
-        <select id="tipoAlimentacion">
+        <select id="alimentacion">
             <option value="">Seleccione una opción</option>
             <option>Alimento seco</option>
             <option>Alimento húmedo</option>
@@ -60,17 +61,17 @@
         <br><br>
 
         <label>Cuidados especiales:</label>
-        <textarea type="text" id="cuidados"></textarea>
+        <textarea id="cuidados"></textarea>
         <br><br>
 
 
         <h3>Información médica</h3>
         <label>Vacunas:</label>
-        <textarea type="text" id="vacunas"></textarea>
+        <textarea id="vacunas"></textarea>
         <br><br>
 
         <label>Enfermedades o alergias:</label>
-        <textarea type="text" id="enfermedades"></textarea>
+        <textarea id="enfermedades"></textarea>
         <br><br>
 
         <label>Nombre del veterinario(a):</label>
@@ -84,18 +85,18 @@
 
         <h3>Contacto de emergencia</h3>
         <label>Nombre:</label>
-        <input type="text" id="contacto">
+        <input type="text" id="contacto" required>
         <br><br>
 
         <label>Teléfono:</label>
-        <input type="tel" id="telefonoEmergencia">
+        <input type="tel" id="telefonoEmergencia" required>
         <br><br>
 
         <button type="submit">Registrar mascota</button>
         <button type="reset">Limpiar</button>
     </form>
 
-    <h2>Fichas de mascotas</h2>
+    <h2>Fichas de Mascotas</h2>
     <div id="listaMascotas"></div>
     <script src="script.js"></script>
 </body>
