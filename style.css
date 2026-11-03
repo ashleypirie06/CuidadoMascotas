@@ -59,17 +59,46 @@ button:hover {
     background-color: #315b49;
 }
 
-/* Fichas de mascotas */
-#listaMascotas div {
-    background-color: white;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 600px;
-    border-radius: 10px;
+/* Contenedor de fichas */
+#listaMascotas {
+    margin: 20px;
 }
 
-/* Fotografías */
-#listaMascotas img {
-    max-width: 200px;
-    border-radius: 8px;
+/* Tarjeta de mascota */
+.ficha {
+    background-color: white;
+    max-width: 450px;
+    padding: 25px;
+    margin: 20px;
+    border-radius: 15px;
+    border: 1px solid #e0e8e3;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Fotografía */
+.ficha img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Nombre de la mascota */
+.ficha h3 {
+    color: #315f4d;
+    font-size: 25px;
+}
+
+/* Títulos de las secciones */
+.ficha h4 {
+    color: #477d65;
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+/* Información */
+.ficha p {
+    font-size: 15px;
+    margin: 8px 0;
+    line-height: 1.5;
+} 
