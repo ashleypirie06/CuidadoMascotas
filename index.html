@@ -3,101 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Cuidado de Mascotas</title>
-    <link rel="stylesheet" href="style.css">
+    <title>PETSYNC | Inicio</title>
+    <link rel="stylesheet" href="css/petsync.css">
 </head>
-<body>
-    <h2>Registro de Mascota</h2>
-    <form id="formMascota">
-        <label>Nombre:</label>
-        <input type="text" id="nombre" required>
-        <br><br>
+<body class="petsync">
 
-        <label>Especie:</label>
-        <select id="especie" required>
-            <option value="">Seleccione una especie</option>
-            <option>Perro</option>
-            <option>Gato</option>
-            <option>Conejo</option>
-            <option>Otro</option>
-        </select>
-        <br><br>
+    <header class="ps-header">
+        <a href="index.html" class="ps-logo">🐾 PETSYNC</a>
 
-        <label>Raza:</label>
-        <input type="text" id="raza">
-        <br><br>
+        <nav class="ps-nav" aria-label="Navegación principal">
+            <a href="index.html" class="activo" aria-current="page">Inicio</a>
+            <a href="create-mascota.html" data-rol="propietario">Mascotas</a>
+            <a href="create-servicios.html">Servicios</a>
+            <a href="#seguimiento">Seguimiento</a>
+            <a href="login.html" id="accesoDemo">Ingresar</a>
+            <button type="button" id="cerrarDemo" class="ps-oculto">Salir</button>
+        </nav>
+    </header>
 
-        <label>Edad:</label>
-        <input type="number" id="edad">
-        <br><br>
+    <main class="ps-contenedor">
 
-        <label>Peso (kg):</label>
-        <input type="number" id="peso">
-        <br><br>
+        <section class="ps-hero">
+            <h1 id="saludo">Bienvenido a PETSYNC</h1>
+            <p>
+                Tu plataforma para organizar el cuidado temporal de mascotas,
+                coordinar servicios y mantener la información importante
+                en un solo lugar.
+            </p>
+            <p id="rolActual">
+                Explora las funcionalidades de nuestra plataforma.
+            </p>
+            <div class="ps-acciones">
+                <a class="ps-boton ps-boton-secundario" href="registro.html">
+                    Crear cuenta
+                </a>
+            </div>
+        </section>
 
-        <label>Fotografía:</label>
-        <input type="file" id="foto" accept="image/*" required> 
-        <br><br>
+        <section class="ps-seccion" aria-labelledby="tituloServicios">
+            <h2 id="tituloServicios">Funcionalidades principales</h2>
 
+            <div class="ps-grid">
 
-        <h3>Alimentación y cuidados</h3>
-        <label>Tipo de alimentación:</label>
-        <select id="alimentacion">
-            <option value="">Seleccione una opción</option>
-            <option>Alimento seco</option>
-            <option>Alimento húmedo</option>
-            <option>Dieta especial</option>
-            <option>Frutas y verduras</option>
-        </select>
+                <article class="ps-tarjeta" data-rol="propietario">
+                    <h3>Mis mascotas</h3>
+                    <p>
+                        Registra tus mascotas y administra su alimentación,
+                        información médica y cuidados especiales.
+                    </p>
+                    <a class="ps-boton" href="create-mascota.html">
+                        Gestionar mascotas
+                    </a>
+                </article>
 
-        <label>Horarios de alimentación:</label>
-        <select id="horarios">
-            <option value="">Seleccione los horarios</option>
-            <option>7:00 a. m. y 4:00 p. m.</option>
-            <option>8:00 a. m. y 5:00 p. m.</option>
-            <option>9:00 a. m. y 6:00 p. m.</option>
-            <option>7:00 a. m. y 7:00 p. m.</option>
-        </select>
-        <br><br>
+                <article class="ps-tarjeta">
+                    <h3>Servicios de cuidado</h3>
+                    <p>
+                        Consulta las solicitudes de cuidado, los horarios
+                        y el estado de cada servicio.
+                    </p>
+                    <a class="ps-boton" href="create-servicios.html">
+                        Ver servicios
+                    </a>
+                </article>
 
-        <label>Cuidados especiales:</label>
-        <textarea id="cuidados"></textarea>
-        <br><br>
+                <article class="ps-tarjeta" id="seguimiento">
+                    <h3>Seguimiento</h3>
+                    <p>
+                        Consulta las tareas de cuidado, las observaciones
+                        y las actualizaciones de las mascotas.
+                    </p>
+                    <button class="ps-boton" type="button" disabled>
+                        Pendiente de integración
+                    </button>
+                </article>
 
+            </div>
+        </section>
 
-        <h3>Información médica</h3>
-        <label>Vacunas:</label>
-        <textarea id="vacunas"></textarea>
-        <br><br>
+        <section class="ps-seccion" aria-labelledby="tituloProceso">
+            <h2 id="tituloProceso">¿Cómo funciona PETSYNC?</h2>
 
-        <label>Enfermedades o alergias:</label>
-        <textarea id="enfermedades"></textarea>
-        <br><br>
+            <div class="ps-grid">
+                <article class="ps-tarjeta">
+                    <h3>1. Registra</h3>
+                    <p>
+                        El propietario proporciona la información esencial
+                        de sus mascotas.
+                    </p>
+                </article>
 
-        <label>Nombre del veterinario(a):</label>
-        <input type="text" id="veterinario">
-        <br><br>
+                <article class="ps-tarjeta">
+                    <h3>2. Coordina</h3>
+                    <p>
+                        El propietario solicita cuidados y el cuidador
+                        revisa las solicitudes disponibles.
+                    </p>
+                </article>
 
-        <label>Contacto del veterinario(a):</label>
-        <input type="tel" id="contactoVeterinario">
-        <br><br>
+                <article class="ps-tarjeta">
+                    <h3>3. Da seguimiento</h3>
+                    <p>
+                        Durante el servicio se registran actividades,
+                        observaciones y actualizaciones.
+                    </p>
+                </article>
+            </div>
+        </section>
 
+        <section class="ps-seccion">
+            <div class="ps-aviso">
+                PETSYNC se encuentra en desarrollo académico.
+                El acceso por roles es demostrativo y las demás
+                funcionalidades se integrarán progresivamente.
+            </div>
+        </section>
 
-        <h3>Contacto de emergencia</h3>
-        <label>Nombre:</label>
-        <input type="text" id="contacto" required>
-        <br><br>
+    </main>
 
-        <label>Teléfono:</label>
-        <input type="tel" id="telefonoEmergencia" required>
-        <br><br>
+    <footer class="ps-footer">
+        PETSYNC | Plataforma Web para la Coordinación del Cuidado de Mascotas
+    </footer>
 
-        <button type="submit">Registrar mascota</button>
-        <button type="reset">Limpiar</button>
-    </form>
-
-    <h2>Fichas de Mascotas</h2>
-    <div id="listaMascotas"></div>
-    <script src="script.js"></script>
+    <script src="js/petsync.js"></script>
 </body>
 </html>

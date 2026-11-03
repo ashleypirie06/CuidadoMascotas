@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Cuidado de Mascotas</title>
+
+    <link rel="stylesheet" href="css/petsync.css">
+</head>
+<body class="petsync-integrada pagina-mascotas">
+<header class="ps-header">
+    <a href="index.html" class="ps-logo">🐾 PETSYNC</a>
+    <nav class="ps-nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="create-mascota.html">Mascotas</a>
+        <a href="create-servicios.html">Servicios</a>
+        <a href="login.html">Ingresar</a>
+    </nav>
+</header>
+    <h2>Registro de Mascota</h2>
+    <form id="formMascota">
+        <label>Nombre:</label>
+        <input type="text" id="nombre" required>
+        <br><br>
+
+        <label>Especie:</label>
+        <select id="especie" required>
+            <option value="">Seleccione una especie</option>
+            <option>Perro</option>
+            <option>Gato</option>
+            <option>Conejo</option>
+            <option>Otro</option>
+        </select>
+        <br><br>
+
+        <label>Raza:</label>
+        <input type="text" id="raza">
+        <br><br>
+
+        <label>Edad:</label>
+        <input type="number" id="edad">
+        <br><br>
+
+        <label>Peso (kg):</label>
+        <input type="number" id="peso">
+        <br><br>
+
+        <label>Fotografía:</label>
+        <input type="file" id="foto" accept="image/*" required>
+        <br><br>
+
+
+        <h3>Alimentación y cuidados</h3>
+        <label>Tipo de alimentación:</label>
+        <select id="alimentacion">
+            <option value="">Seleccione una opción</option>
+            <option>Alimento seco</option>
+            <option>Alimento húmedo</option>
+            <option>Dieta especial</option>
+            <option>Frutas y verduras</option>
+        </select>
+
+        <label>Horarios de alimentación:</label>
+        <select id="horarios">
+            <option value="">Seleccione los horarios</option>
+            <option>7:00 a. m. y 4:00 p. m.</option>
+            <option>8:00 a. m. y 5:00 p. m.</option>
+            <option>9:00 a. m. y 6:00 p. m.</option>
+            <option>7:00 a. m. y 7:00 p. m.</option>
+        </select>
+        <br><br>
+
+        <label>Cuidados especiales:</label>
+        <textarea id="cuidados"></textarea>
+        <br><br>
+
+
+        <h3>Información médica</h3>
+        <label>Vacunas:</label>
+        <textarea id="vacunas"></textarea>
+        <br><br>
+
+        <label>Enfermedades o alergias:</label>
+        <textarea id="enfermedades"></textarea>
+        <br><br>
+
+        <label>Nombre del veterinario(a):</label>
+        <input type="text" id="veterinario">
+        <br><br>
+
+        <label>Contacto del veterinario(a):</label>
+        <input type="tel" id="contactoVeterinario">
+        <br><br>
+
+
+        <h3>Contacto de emergencia</h3>
+        <label>Nombre:</label>
+        <input type="text" id="contacto" required>
+        <br><br>
+
+        <label>Teléfono:</label>
+        <input type="tel" id="telefonoEmergencia" required>
+        <br><br>
+
+        <button type="submit">Registrar mascota</button>
+        <button type="reset">Limpiar</button>
+    </form>
+
+    <h2>Fichas de Mascotas</h2>
+    <div id="listaMascotas"></div>
+    <script src="js/script.js"></script>
+</body>
+</html>
